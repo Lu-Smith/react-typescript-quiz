@@ -1,4 +1,7 @@
-import React from 'react'
+import React from 'react';
+import QuestionCard from './QuestionCard';
+
+
 
 const Main = () => {
 
@@ -13,7 +16,7 @@ const Main = () => {
     const nextQuestoin = () => {
   
     }
-    
+
   return (
     <div className='Main'>
     <h1>Quiz</h1>
@@ -21,7 +24,9 @@ const Main = () => {
       Start
      </button>
      <p className='score'>Score:</p>
-     <p className='loading'>Loading questions</p>
+     <p className='loading'>Loading questions...</p>
+     <QuestionCard />
+     <button className='next' onClick={nextQuestoin}>Next question</button>
     </div>
   )
 }
