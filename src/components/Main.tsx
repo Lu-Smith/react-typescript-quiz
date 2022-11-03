@@ -1,9 +1,12 @@
-import React from 'react';
+import React, {useState} from 'react';
 import QuestionCard from './QuestionCard';
 
 
 
 const Main = () => {
+
+    const [loading, setLoading] = useState(false);
+    const [questions, setQuestions] = useState([]);
 
     const startTrivia = async () => {
 
