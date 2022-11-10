@@ -61,7 +61,13 @@ const Main = () => {
          userAnswer={userAnswers ? userAnswers[number] : undefined}
          callback={checkAnswer}/> 
     )}
-     <button className='next' onClick={nextQuestion}>Next question</button>
+    {!gameOver && 
+     !loading && 
+     userAnswers.length === number + 1 && 
+     number !== Total_Questions -1 ? (
+      <button className='next' onClick={nextQuestion}>Next question</button>
+    ) : null}
+     
     </div>
   )
 }
