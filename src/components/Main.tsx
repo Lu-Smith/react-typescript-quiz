@@ -52,14 +52,15 @@ const Main = () => {
     ): null}
     {!gameOver ? <p className='score'>Score:</p> : null}
     {loading && <p className='loading'>Loading questions...</p>}
-     
-     {/* <QuestionCard 
-     questionNumber={number + 1}
-     totalQuestions={Total_Questions} 
-     question={questions[number].question}
-     answers={questions[number].answers}
-     userAnswer={userAnswers ? userAnswers[number] : undefined}
-     callback={checkAnswer}/> */}
+    {!loading && !gameOver && (
+         <QuestionCard 
+         questionNumber={number + 1}
+         totalQuestions={Total_Questions} 
+         question={questions[number].question}
+         answers={questions[number].answers}
+         userAnswer={userAnswers ? userAnswers[number] : undefined}
+         callback={checkAnswer}/> 
+    )}
      <button className='next' onClick={nextQuestion}>Next question</button>
     </div>
   )
