@@ -19,19 +19,30 @@ const Main = () => {
     const [score, setScore] = useState(0);
     const [gameOver, setGameOver] = useState(true);
 
-    console.log(fetchQuizQuestions(Total_Questions));
+
 
     const startTrivia = async () => {
+        setLoading(true);
+        setGameOver(false);
 
-    }
+        const newQuestions = await fetchQuizQuestions(Total_Questions);
+
+        setQuestions(newQuestions);
+        setScore(0);
+        setUserAnswers([]);
+        setNumber(0);
+        setLoading(false);
+    };
+
+    console.log(questions);
   
     const checkAnswer = (e: React.MouseEvent<HTMLButtonElement>) => {
   
-    }
+    };
   
-    const nextQuestoin = () => {
+    const nextQuestion = () => {
   
-    }
+    };
 
   return (
     <div className='Main'>
@@ -48,9 +59,9 @@ const Main = () => {
      answers={questions[number].answers}
      userAnswer={userAnswers ? userAnswers[number] : undefined}
      callback={checkAnswer}/> */}
-     <button className='next' onClick={nextQuestoin}>Next question</button>
+     <button className='next' onClick={nextQuestion}>Next question</button>
     </div>
   )
 }
 
-export default Main
+export default Main;
