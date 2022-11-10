@@ -19,8 +19,6 @@ const Main = () => {
     const [score, setScore] = useState(0);
     const [gameOver, setGameOver] = useState(true);
 
-
-
     const startTrivia = async () => {
         setLoading(true);
         setGameOver(false);
@@ -47,6 +45,7 @@ const Main = () => {
   return (
     <div className='Main'>
     <h1>Quiz</h1>
+    {gameOver || userAnswers.length === Total_Questions}
      <button className='start' onClick={startTrivia}>
       Start
      </button>
