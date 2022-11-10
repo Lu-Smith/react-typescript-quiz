@@ -4,7 +4,7 @@ import QuestionCard from './QuestionCard';
 
 type AnswerObject = {
   question: string;
-  answer: string;
+  answers: string;
   correct: boolean;
   correctAnswer: string;
 };
@@ -45,12 +45,14 @@ const Main = () => {
   return (
     <div className='Main'>
     <h1>Quiz</h1>
-    {gameOver || userAnswers.length === Total_Questions}
-     <button className='start' onClick={startTrivia}>
-      Start
-     </button>
-     <p className='score'>Score:</p>
-     <p className='loading'>Loading questions...</p>
+    {gameOver || userAnswers.length === Total_Questions ? (
+        <button className='start' onClick={startTrivia}>
+         Start
+        </button>
+    ): null}
+    {!gameOver ? <p className='score'>Score:</p> : null}
+    {loading && <p className='loading'>Loading questions...</p>}
+     
      {/* <QuestionCard 
      questionNumber={number + 1}
      totalQuestions={Total_Questions} 
