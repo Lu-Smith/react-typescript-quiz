@@ -1,5 +1,7 @@
 import React from 'react';
 import {AnswerObject} from './Main';
+import {Container } from './styles/Footer.styles';
+import {Number, Answer} from './styles/QuestionCard.styles';
 
 type Props = {
     question: string;
@@ -12,12 +14,12 @@ type Props = {
 
 const QuestionCard: React.FC<Props> = ({question, answers, callback, userAnswer, questionNumber, totalQuestions}) => {
   return (
-    <div>
-        <p className='number'>
+    <Container>
+        <Number>
             Question: {questionNumber} / {totalQuestions}
-        </p>
+        </Number>
         <p dangerouslySetInnerHTML={{__html: question}} />
-        <div>
+        <Answer>
              {answers.map(answer => (
                 <div key={answer}>
                    <button disabled={userAnswer ? true : false} value ={answer} onClick={callback}>
@@ -25,9 +27,10 @@ const QuestionCard: React.FC<Props> = ({question, answers, callback, userAnswer,
                    </button> 
                 </div>
              ))}
-        </div>
+        </Answer>
 
-    </div>
+
+    </Container>
   )
 }
 

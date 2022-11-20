@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {fetchQuizQuestions, QuestionState} from '../API';
 import QuestionCard from './QuestionCard';
-import { Container } from './styles/Main.styles';
+import { Container, Score } from './styles/Main.styles';
 
 export type AnswerObject = {
   question: string;
@@ -68,7 +68,7 @@ const Main = () => {
          Start
         </button>
     ): null}
-    {!gameOver ? <p className='score'>Score: {score}</p> : null}
+    {!gameOver ? <Score>Score <span>{score}</span> </Score> : null}
     {loading && <p className='loading'>Loading questions...</p>}
     {!loading && !gameOver && (
          <QuestionCard 

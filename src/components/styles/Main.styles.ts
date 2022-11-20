@@ -23,3 +23,15 @@ export const Container = styled.div`
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 };
 `
+
+export const Score= styled.div`
+font-size: 40px;
+font-weight: 800;
+
+span {
+    background-color: #5dacbd; 
+    padding: 10px 15px;
+    border-radius: 15px;
+    font-style: normal;
+}
+`
