@@ -1,8 +1,10 @@
-import React from 'react'
+import React from 'react';
+import { Container } from './styles/Header.styles';
+
 
 const Header = () => {
   return (
-    <div className='Header'>Header</div>
+    <Container>Mythology</Container>
   )
 }
 
