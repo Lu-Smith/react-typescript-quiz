@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {fetchQuizQuestions, QuestionState} from '../API';
 import QuestionCard from './QuestionCard';
+import { Container } from './styles/Main.styles';
 
 export type AnswerObject = {
   question: string;
@@ -60,7 +61,7 @@ const Main = () => {
     };
 
   return (
-    <div className='Main'>
+    <Container>
     <h1>Quiz</h1>
     {gameOver || userAnswers.length === Total_Questions ? (
         <button className='start' onClick={startTrivia}>
@@ -84,7 +85,7 @@ const Main = () => {
      number !== Total_Questions -1 ? (
       <button className='next' onClick={nextQuestion}>Next question</button>
     ) : null}
-    </div>
+    </Container>
   )
 }
 

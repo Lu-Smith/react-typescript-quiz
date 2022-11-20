@@ -6,7 +6,7 @@ html {
  height: 100%;
 }
 body {
- background-color: #5dacbd;
+ background-color: #e0ebeb; 
  text-align: center;
  padding: 30px;
 }
