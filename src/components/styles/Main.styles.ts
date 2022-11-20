@@ -10,6 +10,7 @@ export const Container = styled.div`
 
  h1 {
     color: #24527a; 
+    font-family: 'Pacifico', cursive;
  }
 
  button {

@@ -13,6 +13,6 @@ body {
 
 * {
     box-sizing: border-box;
-    font-family: 'Catamaran', sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif;
 }
 `
