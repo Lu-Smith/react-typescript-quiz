@@ -85,6 +85,8 @@ const Main = () => {
      number !== Total_Questions -1 ? (
       <button className='next' onClick={nextQuestion}>Next question</button>
     ) : null}
+    {userAnswers.length === Total_Questions ? (<div>Game Over</div>) : null}
+    
     </Container>
   )
 }

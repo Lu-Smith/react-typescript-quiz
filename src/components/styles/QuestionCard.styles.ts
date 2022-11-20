@@ -6,6 +6,15 @@ export const Answer = styled.div`
 
  button {
     width: 100%;
+
+ &:active {
+    background-color: #5dacbd; 
+    color: #e0ebeb; 
+ }
+ &:hover {
+    background-color: #5dacbd; 
+    color: #e0ebeb; 
+ }
  }
 `
 
