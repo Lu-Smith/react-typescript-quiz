@@ -32,8 +32,6 @@ const Main = () => {
         setNumber(0);
         setLoading(false);
     };
-
-    console.log(questions);
   
     const checkAnswer = (e: React.MouseEvent<HTMLButtonElement>) => {
       if (!gameOver) {

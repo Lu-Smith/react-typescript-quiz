@@ -18,4 +18,13 @@ export const Container = styled.div`
     padding: 5px 0;
  }
  }
+
+ @media (max-width: 768px) {
+    font-size: 18px;
+ }
+ 
+ @media (max-width: 480px) {
+    font-size: 12px;
+    padding: 15px 2px;
+ }
 `

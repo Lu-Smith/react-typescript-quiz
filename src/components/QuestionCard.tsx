@@ -1,7 +1,6 @@
 import React from 'react';
 import {AnswerObject} from './Main';
-import {Container } from './styles/Footer.styles';
-import {Number, Answer} from './styles/QuestionCard.styles';
+import {Number, Answer, Question, Container} from './styles/QuestionCard.styles';
 
 type Props = {
     question: string;
@@ -18,7 +17,7 @@ const QuestionCard: React.FC<Props> = ({question, answers, callback, userAnswer,
         <Number>
             Question: {questionNumber} / {totalQuestions}
         </Number>
-        <p dangerouslySetInnerHTML={{__html: question}} />
+        <Question dangerouslySetInnerHTML={{__html: question}} /> 
         <Answer>
              {answers.map(answer => (
                 <div key={answer}>
@@ -28,8 +27,6 @@ const QuestionCard: React.FC<Props> = ({question, answers, callback, userAnswer,
                 </div>
              ))}
         </Answer>
-
-
     </Container>
   )
 }

@@ -11,6 +11,11 @@ export const Container = styled.div`
  h1 {
     color: #24527a; 
     font-family: 'Pacifico', cursive;
+    margin-bottom: 30px;
+
+    @media (max-width: 480px) {
+    font-size: 30px;
+ }
  }
 
  button {
@@ -29,7 +34,15 @@ export const Container = styled.div`
       background-color: #5dacbd; 
       color: #e0ebeb; 
     }
+
+    @media (max-width: 480px) {
+    font-size: 18px;
+ }
 };
+
+@media (max-width: 480px) {
+    font-size: 18px;
+ }
 `
 
 export const Score= styled.div`
@@ -43,4 +56,12 @@ span {
     border-radius: 15px;
     font-style: normal;
 }
+
+@media (max-width: 768px) {
+    font-size: 33px;
+ }
+
+ @media (max-width: 480px) {
+    font-size: 25px;
+ }
 `
