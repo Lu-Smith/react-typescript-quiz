@@ -10,5 +10,12 @@ export const Container = styled.div`
  a {
     text-decoration: none;
     color: #e0ebeb; 
+    transition: 200ms all ease-in-out;
+
+ &:hover {
+    border-bottom: 3px dotted #5dacbd; 
+    border-top: 3px dotted #5dacbd; 
+    padding: 5px 0;
+ }
  }
 `

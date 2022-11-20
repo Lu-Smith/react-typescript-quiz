@@ -23,6 +23,7 @@ export const Container = styled.div`
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     transition: 200ms all ease-in-out;
     margin-bottom: 20px;
+    transition: 200ms all ease-in-out;
 
     &:hover {
       background-color: #5dacbd; 
@@ -34,6 +35,7 @@ export const Container = styled.div`
 export const Score= styled.div`
 font-size: 40px;
 font-weight: 800;
+margin-bottom: 20px;
 
 span {
     background-color: #5dacbd; 
