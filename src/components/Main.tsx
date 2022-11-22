@@ -60,11 +60,14 @@ const Main = () => {
 
   return (
     <Container>
-    <h1>Quiz</h1>
+    
     {gameOver || userAnswers.length === Total_Questions ? (
+      <>
         <button className='start' onClick={startTrivia}>
          Start
         </button>
+        <h1>Quiz</h1>
+      </>
     ): null}
     {!gameOver ? <Score>Score <span>{score}</span> </Score> : null}
     {loading && <p className='loading'>Loading questions...</p>}
