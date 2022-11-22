@@ -65,3 +65,8 @@ span {
     font-size: 25px;
  }
 `
+
+export const EndGame = styled.div`
+color: red;
+font-size: 30px;
+`

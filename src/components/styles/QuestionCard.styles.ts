@@ -35,10 +35,12 @@ export const Answer = styled.div`
     background-color: #5dacbd; 
     color: #e0ebeb; 
  }
+}
 
  @media (max-width: 768px) {
     font-size: 18px;
  }
+
 `
 
 export const Number = styled.p`
@@ -49,6 +51,7 @@ export const Number = styled.p`
 
 export const Question = styled.p`
  font-size: 25px;
+ margin: 15px 0;
 
  @media (max-width: 768px) {
     font-size: 20px;
