@@ -71,7 +71,7 @@ const Main = () => {
     ): null}
     {!gameOver ? <Score>Score <span>{score}</span> </Score> : null}
     {loading && <p className='loading'>Loading questions...</p>}
-    {!loading && !gameOver && (
+    {!loading && !gameOver && userAnswers.length !== Total_Questions && (
          <QuestionCard 
          questionNumber={number + 1}
          totalQuestions={Total_Questions} 
